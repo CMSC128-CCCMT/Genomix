@@ -6,6 +6,16 @@ namespace Genomix;
 
 public partial class App : Application
 {
+    private Frontend _frontend;
+    private Backend _backend;
+
+    public App()
+    {
+        _backend = new Backend();
+        _frontend = new Frontend(_backend);
+    }
+
+
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
@@ -15,7 +25,8 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            desktop.MainWindow = new MainWindow();
+           // delegate the creation of the main window to frontend
+           _frontend.GenerateMainWindow(desktop);
         }
 
         base.OnFrameworkInitializationCompleted();

@@ -1,0 +1,103 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <!-- Add Controls for Previewer Here -->
+    </Border>
+  </Design.PreviewWith>
+  
+  <!-- standard button {y}-->
+  <Style Selector="Button.standardButton">      
+    <Setter Property="Background" Value="{DynamicResource Elevated2Brush}"/>
+    <Setter Property="Margin" Value="0" />
+
+    <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentHoverBrush}" />
+    </Style>
+
+    <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+      <Setter Property="RenderTransform" Value="translate(0px, 5px)" />
+    </Style>
+
+    <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+      <Setter Property="Opacity" Value="0.4" />
+    </Style>
+  </Style>
+
+
+  <!-- dualmouse button {y}-->
+  <Style Selector="Button.dualmouseButton">      
+    <Setter Property="Background" Value="{DynamicResource Elevated2Brush}"/>
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+
+    <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentHoverBrush}" />
+    </Style>
+
+    <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+      <Setter Property="RenderTransform" Value="translate(0px, 2px)" />
+      <Setter Property="Opacity" Value="0.8" />
+    </Style>
+
+    <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+      <Setter Property="Opacity" Value="0.4" />
+    </Style>
+    
+    <!-- a custom "pseudoclass" -->
+    <Style Selector="^.rightpressed /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+      <Setter Property="RenderTransform" Value="scale(0.98) translate(0px, 2px)" />
+      <Setter Property="Opacity" Value="0.8" />
+    </Style>
+  </Style>
+
+
+  <!-- highlighted button {y}-->
+  <Style Selector="Button.highlightedButton">
+    <Setter Property="Background" Value="{DynamicResource AccentBrush}"/>
+    <Setter Property="Margin" Value="0" />
+
+    <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentHoverBrush}" />
+    </Style>
+
+    <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+      <Setter Property="RenderTransform" Value="translate(0px, 5px)" />
+    </Style>
+
+    <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+      <Setter Property="Opacity" Value="0.4" />
+    </Style>
+  </Style>
+
+
+  <!-- sidebar button {g} -->
+  <Style Selector="Button.sidebarButton">
+    <Setter Property="Background" Value="{DynamicResource ForegroundBrush}"/>
+    <Setter Property="Margin" Value="0" />
+    <Setter Property="CornerRadius" Value="10" />
+    <Setter Property="Height" Value="50" />
+    <Setter Property="Width" Value="50" />
+    <Setter Property="HorizontalAlignment" Value="Center" />
+
+    <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentHoverBrush}" />
+    </Style>
+
+    <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentPressedBrush}" />
+    </Style>
+
+    <Style Selector="^:disabled /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="{DynamicResource AccentBrush}" />
+    </Style>
+  </Style>
+
+  
+</Styles>

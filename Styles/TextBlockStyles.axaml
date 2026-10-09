@@ -1,0 +1,60 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <!-- Add Controls for Previewer Here -->
+    </Border>
+  </Design.PreviewWith>
+
+  <Style Selector="TextBlock">
+    <!-- default textblock properties -->
+  </Style>
+
+  <!-- standard body {r} -->
+  <Style Selector="TextBlock.standardBody">
+    <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
+    <Setter Property="FontSize" Value="{StaticResource BodyFont}" />
+  </Style>
+
+
+  <!-- mute body {o} -->
+  <Style Selector="TextBlock.muteBody">
+    <Setter Property="Foreground" Value="{DynamicResource SecondaryText}" />
+    <Setter Property="FontSize" Value="{StaticResource BodyFont}" />
+    <Setter Property="FontStyle" Value="Italic" />
+    <Setter Property="Opacity" Value="0.67" />
+  </Style>
+
+
+  <!-- header block {y} -->
+  <Style Selector="TextBlock.standardHeader1">
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryText}" />
+    <Setter Property="FontSize" Value="{StaticResource H1Font}" />
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+
+
+  <!-- header medium block {y} -->
+  <Style Selector="TextBlock.standardHeader2">
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryText}" />
+    <Setter Property="FontSize" Value="{StaticResource H2Font}" />
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+
+
+  <!-- title block {g} -->
+  <Style Selector="TextBlock.standardTitle">
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryText}" />
+    <Setter Property="FontSize" Value="{StaticResource TitleFont}" />
+    <Setter Property="FontWeight" Value="Bold" />
+  </Style>
+
+
+  <!-- sidebar text {b} -->
+  <Style Selector="TextBlock.sidebarText">
+    <Setter Property="Foreground" Value="{DynamicResource PrimaryText}" />
+    <Setter Property="FontSize" Value="{StaticResource SmallFont}" />
+  </Style>
+
+
+</Styles>
