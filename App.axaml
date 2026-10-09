@@ -81,7 +81,7 @@
             <Setter Property="HorizontalAlignment" Value="Stretch" />
         </Style>
 
-        <StyleInclude Source="avares://Reviolet/Styles/ButtonStyles.axaml" />
-        <StyleInclude Source="avares://Reviolet/Styles/TextBlockStyles.axaml" />
+        <StyleInclude Source="avares://Genomix/Styles/ButtonStyles.axaml" />
+        <StyleInclude Source="avares://Genomix/Styles/TextBlockStyles.axaml" />
     </Application.Styles>
 </Application>
