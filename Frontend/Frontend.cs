@@ -23,16 +23,7 @@ public class Frontend : INavigation
 	// called by App after framework init, to start presentation
 	public void GenerateMainWindow(IClassicDesktopStyleApplicationLifetime desktop)
 	{
-		// initialize an empty main window
-		// var deps = new TasklistDependencies(_backend.StateQuery, _backend.TaskService);
-		// var initScene = new TasklistScene(deps);
-		// var sidebar = new SidebarView(this);
-		
-		// to be implemented: custom main window
-		// _mainWindow = new MainWindow(sidebar, initScene);
-		SceneChanged?.Invoke(SceneName.TASKLIST);
-
-		// set MainWindow as the actual window of the app
+		_mainWindow = new MainWindow();
 		desktop.MainWindow = _mainWindow;
 	}
 
