@@ -4,6 +4,7 @@ namespace Genomix;
 
 public enum SceneName
 {
+	SAMPLES,
 	TASKLIST,
 	SETTINGS
 }

@@ -24,6 +24,7 @@ public class Frontend : INavigation
 	public void GenerateMainWindow(IClassicDesktopStyleApplicationLifetime desktop)
 	{
 		_mainWindow = new MainWindow();
+		_mainWindow.SamplesRequested += () => NavigateToScene(SceneName.SAMPLES);
 		desktop.MainWindow = _mainWindow;
 	}
 
@@ -40,6 +41,9 @@ public class Frontend : INavigation
 		// SceneControl newScene;
 		switch (destination)
 		{
+			case SceneName.SAMPLES:
+				_mainWindow.ShowSamples();
+				break;
 			case SceneName.TASKLIST:
 				// var deps = new TasklistDependencies(_backend.StateQuery, _backend.TaskService);
 				// newScene = new TasklistScene(deps);

@@ -5,5 +5,12 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Genomix.MainWindow"
         Title="Genomix">
-    Welcome to Avalonia!
+    <StackPanel Margin="24" Spacing="12">
+        <TextBlock Text="Genomix" FontSize="28" FontWeight="Bold" />
+        <TextBlock Text="Bioinformatics research workspace" />
+        <Button x:Name="SamplesButton"
+                Content="Samples"
+                HorizontalAlignment="Left"
+                Padding="16,8" />
+    </StackPanel>
 </Window>
