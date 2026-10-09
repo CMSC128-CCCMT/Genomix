@@ -4,6 +4,7 @@ namespace Genomix;
 
 public enum SceneName
 {
+	OVERVIEW,
 	SAMPLES,
 	TASKLIST,
 	SETTINGS
@@ -11,7 +12,7 @@ public enum SceneName
 
 public interface INavigation
 {
-	// to be implemented: Scenes system
+	// to be implemented: Scenes system	
 	// public SceneControl? CurrentScene { get; }
 	public event Action<SceneName>? SceneChanged;
 	

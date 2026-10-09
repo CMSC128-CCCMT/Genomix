@@ -25,6 +25,7 @@ public class Frontend : INavigation
 	{
 		_mainWindow = new MainWindow();
 		_mainWindow.SamplesRequested += () => NavigateToScene(SceneName.SAMPLES);
+		_mainWindow.OverviewRequested += () => NavigateToScene(SceneName.OVERVIEW);
 		desktop.MainWindow = _mainWindow;
 	}
 
@@ -41,6 +42,9 @@ public class Frontend : INavigation
 		// SceneControl newScene;
 		switch (destination)
 		{
+			case SceneName.OVERVIEW:
+				_mainWindow.ShowOverview();
+				break;
 			case SceneName.SAMPLES:
 				_mainWindow.ShowSamples();
 				break;

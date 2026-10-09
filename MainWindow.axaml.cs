@@ -9,6 +9,7 @@ public partial class MainWindow : Window
     private object? _overviewContent;
 
     public event Action? SamplesRequested;
+    public event Action? OverviewRequested;
 
     public MainWindow()
     {
@@ -30,7 +31,7 @@ public partial class MainWindow : Window
             HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Left,
             Padding = new Avalonia.Thickness(16, 8)
         };
-        backButton.Click += (_, _) => ShowOverview();
+        backButton.Click += (_, _) => OverviewRequested?.Invoke(); 
 
         var samplesPage = new StackPanel
         {
